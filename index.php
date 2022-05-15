@@ -20,13 +20,13 @@
       <div class="card card-body">
         <form action="save_task.php" method="POST">
           <div class="form-group">
-            <input type="text" name="id" class="form-control" placeholder="Nomor" autofocus>
+            <input type="text" name="id" class="form-control" placeholder="Nomor plat kendaraan" autofocus>
           </div>
           <div class="form-group">
-            <textarea name="judul" rows="2" class="form-control" placeholder="Judul Surat"></textarea>
+            <textarea name="merek" rows="2" class="form-control" placeholder="Merek kendaraan"></textarea>
           </div>
           <div class="form-group">
-            <input type="date" name="tanggal" class="form-control">
+          <input type="text" name="tipe" class="form-control" placeholder="Tipe kendaraan(motor/mobil/truk)" autofocus>
           </div>
           <input type="submit" name="Simpan" class="btn btn-success btn-block" value="Save Task">
         </form>
@@ -36,9 +36,9 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>No Surat</th>
-            <th>Judul</th>
-            <th>Tanggal</th>
+            <th>Nomor plat kendaraan</th>
+            <th>Merek kendaraan</th>
+            <th>tipe kendaraan</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -51,8 +51,8 @@
           while($row = pg_fetch_assoc($result_tasks)) { ?>
           <tr>
             <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['judul']; ?></td>
-            <td><?php echo $row['tanggal']; ?></td>
+            <td><?php echo $row['merek']; ?></td>
+            <td><?php echo $row['tipe']; ?></td>
             <td>
               <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>

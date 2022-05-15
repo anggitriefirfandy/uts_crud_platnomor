@@ -4,9 +4,9 @@ include('db.php');
 
 if (isset($_POST['Simpan'])) {
   $id = $_POST['id'];
-  $judul = $_POST['judul'];
-  $tanggal = $_POST['tanggal'];
-  $query = "INSERT INTO srt(id, judul, tanggal) VALUES ('$id', '$judul', '$tanggal')";
+  $merek = $_POST['merek'];
+  $tipe = $_POST['tipe'];
+  $query = "INSERT INTO srt(id, merek, tipe) VALUES ('$id', '$merek', '$tipe')";
   $result = pg_query($conn, $query);
   if(!$result) {
     die("Query Failed.");

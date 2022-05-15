@@ -10,7 +10,7 @@ if(isset($_GET['id'])) {
     die("Query Failed.");
   }
 
-  $_SESSION['message'] = 'Data Surat Berhasil Di Hapus';
+  $_SESSION['message'] = 'Data Plat Nomor Kendaraan Berhasil Di Hapus';
   $_SESSION['message_type'] = 'danger';
   header('Location: index.php');
 }

@@ -1,8 +1,8 @@
 <?php
 include("db.php");
 $id = '';
-$judul= '';
-$tanggal = '';
+$merek= '';
+$tipe = '';
 
 if  (isset($_GET['id'])) {
   $id = $_GET['id'];
@@ -11,18 +11,18 @@ if  (isset($_GET['id'])) {
   if (pg_num_rows($result) == 1) {
     $row = pg_fetch_array($result);
     $id = $row['id'];
-    $judul = $row['judul'];
-    $tanggal = $row['tanggal'];
+    $judul = $row['merek'];
+    $tanggal = $row['tipe'];
   }
 }
 
 if (isset($_POST['update'])) {
   $id = $_GET['id'];
   $id= $_POST['id'];
-  $judul = $_POST['judul'];
-  $tanggal = $_POST['tanggal'];
+  $judul = $_POST['merek'];
+  $tanggal = $_POST['tipe'];
 
-  $query = "UPDATE srt set id = '$id', judul = '$judul', tanggal = '$tanggal' WHERE id=$id";
+  $query = "UPDATE srt set id = '$id', merek = '$merek', tipe = '$tipe' WHERE id=$id";
   pg_query($conn, $query);
   $_SESSION['message'] = 'Data Berhasil Di Ubah';
   $_SESSION['message_type'] = 'warning';
@@ -37,13 +37,13 @@ if (isset($_POST['update'])) {
       <div class="card card-body">
       <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
         <div class="form-group">
-          <input name="id" type="text" class="form-control" value="<?php echo $id; ?>" placeholder="Ubah Nomor">
+          <input name="id" type="text" class="form-control" value="<?php echo $id; ?>" placeholder="Ubah Nomor plat">
         </div>
         <div class="form-group">
-        <textarea name="judul" class="form-control" cols="30" rows="10"><?php echo $judul;?></textarea>
+        <textarea name="merek" class="form-control" cols="30" rows="10"><?php echo $merek;?></textarea>
         </div>
         <div class="form-group">
-            <input type="date" name="tanggal" class="form-control"><?php echo $tanggal;?>
+          <input type="text" name="tipe" class="form-control"><?php echo $tipe;?>
           </div>
         <button class="btn-success" name="update">
           Update

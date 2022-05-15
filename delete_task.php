@@ -4,7 +4,7 @@ include("db.php");
 
 if(isset($_GET['id'])) {
   $id = $_GET['id'];
-  $query = "DELETE FROM srt WHERE id = $id";
+  $query = "DELETE FROM data WHERE id = $id";
   $result = pg_query($conn, $query);
   if(!$result) {
     die("Query Failed.");

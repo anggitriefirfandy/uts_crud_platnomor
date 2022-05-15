@@ -11,8 +11,8 @@ if  (isset($_GET['id'])) {
   if (pg_num_rows($result) == 1) {
     $row = pg_fetch_array($result);
     $id = $row['id'];
-    $judul = $row['merek'];
-    $tanggal = $row['tipe'];
+    $merek = $row['merek'];
+    $tipe = $row['tipe'];
   }
 }
 

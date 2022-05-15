@@ -19,8 +19,8 @@ if  (isset($_GET['id'])) {
 if (isset($_POST['update'])) {
   $id = $_GET['id'];
   $id= $_POST['id'];
-  $judul = $_POST['merek'];
-  $tanggal = $_POST['tipe'];
+  $merek = $_POST['merek'];
+  $tipe = $_POST['tipe'];
 
   $query = "UPDATE srt set id = '$id', merek = '$merek', tipe = '$tipe' WHERE id=$id";
   pg_query($conn, $query);

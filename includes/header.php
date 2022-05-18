@@ -13,7 +13,8 @@
 
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.php">APLIKASI PEREKAMAN DATA KENDARAAN</a>
+          <img src="img/Header.jpg" width="100%" height="200">
+        <a class="navbar-brand" href="index.php"><b>APLIKASI PEREKAMAN DATA KENDARAAN</b></a>
         <a class="nav-item nav-link" href="https://www.instagram.com/anggitirfandy/">Profile Saya</a>
       </div>
     </nav>

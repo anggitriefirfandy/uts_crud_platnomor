@@ -38,6 +38,7 @@ if (isset($_POST['update'])) {
   <div class="row">
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
+        <h3>Semua kolom wajib diisi</h3>
       <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
         <div class="form-group">
           <input name="id" type="text" class="form-control" value="<?php echo $id; ?>" placeholder="Ubah Nomor urut">

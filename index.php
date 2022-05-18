@@ -26,7 +26,7 @@
             <input type="text" name="nomor" class="form-control" placeholder="Nomor plat kendaraan" autofocus>
           </div>
           <div class="form-group">
-            <textarea name="merek" rows="2" class="form-control" placeholder="Merek kendaraan"></textarea>
+          <input type="text" name="merek" class="form-control" placeholder="Merek kendaraan"autofocus>
           </div>
           <div class="form-group">
           <input type="text" name="tipe" class="form-control" placeholder="Tipe kendaraan(motor/mobil/truk)" autofocus>
